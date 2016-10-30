@@ -1,0 +1,7 @@
+I"g(function() {
+  $(document).ready(function() {
+    $('.comment').shorten();
+  });
+
+}).call(this);
+:ET

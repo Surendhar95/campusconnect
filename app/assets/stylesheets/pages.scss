@@ -1,0 +1,113 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//PACE
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+header{
+    width:100%;
+    position:fixed;
+    top:0px;
+    z-index: 100;
+}
+.re-left{
+    position:relative;
+    left: 250px;
+}
+
+.re-right{
+    position:relative;
+    right:250px;
+}
+
+.submit-size{
+    width: 200px;
+}
+
+.brand-color{
+    color: #0d47a1
+}
+
+.brand-repos{
+    position:relative;
+    left: 200px;
+}
+
+.custom-font1{
+    font-size: 22px;
+}
+
+.custom-font2{
+    font-size: 15px;
+}
+
+
+#click:active span{
+    color: red;
+}
+    hr {
+    border: none;
+   height: 5px;
+   color: black;
+   background-color: black;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.ans-img{
+    max-width:80%;
+    min-width: 50%;
+    height: auto;
+
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 2px 4px 1px #fff;
+    box-shadow: 2px 2px 4px 1px #fff;
+}
+a {
+	color: #0254EB
+}
+a:visited {
+	color: #0254EB
+}
+a.morelink {
+	text-decoration:none;
+	outline: none;
+}
+.morecontent span {
+	display: none;
+}
+.comment {
+	width: 100%;
+	margin: 10px;
+}
+
+.pos{
+    position:relative;
+    left:-12px;
+}
