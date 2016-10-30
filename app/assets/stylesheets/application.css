@@ -15,3 +15,22 @@
  *= require bootstrap.min
 
  */
+
+ .ans-img{
+     max-width:80%;
+     min-width: 50%;
+     height: auto;
+
+ }
+
+.select-color {
+    color: #0077b5;
+}
+
+.custom-font2:hover{
+    color: #0077b5;
+}
+
+.dropdown:hover span{
+    color: #0077b5;
+}

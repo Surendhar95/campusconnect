@@ -71,4 +71,11 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :password)
     end
+    def ask_question
+      session[:user_id] = User.first.id
+      @user = User.find_by_id(session[:user_id])
+
+    end
+
+
 end

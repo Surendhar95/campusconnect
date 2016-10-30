@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   def index
+    @question = Question.order(updated_at: :desc).all
 
-    @questions = Question.All
+
   end
 
   def about

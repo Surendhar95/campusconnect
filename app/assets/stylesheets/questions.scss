@@ -1,3 +1,45 @@
 // Place all the styles related to the Questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.ans-img{
+    max-width:80%;
+    min-width: 50%;
+    height: auto;
+
+}
+
+.im-centered { margin: auto;
+  position:absolute;
+  min-width: 1000px;
+  min-height: 500px;
+  background-color:#eeeeee;
+  top:13%;
+  left:15%;
+  border-radius: 20px;
+
+}
+.name
+{
+  position:relative;
+  top:15%;
+  left:25.5%;
+}
+.name1
+{
+  position: relative;
+height: 106px;
+  }
+
+.submit
+{
+  text-emphasis-color: white;
+  position:relative;
+  margin-top:2%;
+  left:40%;
+  background-color:#0077B5;
+}
+.align
+{
+  position: relative;
+  left:-25%;
+}

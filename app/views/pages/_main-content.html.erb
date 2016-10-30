@@ -1,227 +1,39 @@
 <div class="col-sm-6 col-md-6 col-lg-6">
-
+<% @question.each do |question| %>
     <div class="story">
         <hr>
         <div class="question">
-            <h3><b>What is the capital of India?</b></h3>
+            <h3><b> <%= question.body %></b></h3>
+            <br>
+            <h4> <%= question.description %></h4>
+            Tags: <b><%= question.tags %></b>
         </div>
-        <div class="author">
-            <b>Surendhar</b>,Coder,blogger
+        <% answer = question.answers.order(:likes).last %>
 
-        </div>
         <br>
         <div class="answer">
-            <img src="food.jpg" class="ans-img"/>
+            <div class="author">
+                <h5><b><%= User.find(answer.user_id).username %></b>,Coder,blogger</h5>
+
+            </div>
+            <img src="/images/food.jpg" class="ans-img"/>
             <br><br>
             <div class="comment more pos">
-
-                James Pain, Currently employed in technology company in Suzhou
-                Written 16m ago
-
-                Because life is unfair in China.
-
-                Westerners come with high qualifications if they're expats. Or get privilege in English teaching. Chinese are however racist towards non-white foreigners and claim i... (more)
-                Downvote
-                Comments1+
-                Share
-                Question asked ·
-                Google (company)
-                · 26m
-                Why is Bing faster than Google? What optimizations have they done to achieve this?
-                Many times while using internet at very low speeds, I found that Bing is extremely faster than Google. I'm wondering how they achieve such speeds.
-                Follow5
-                Downvote
-                Request Answers:
-                Request From Quora
-                We will distribute this question to writers, and notify you about new answers.
-                Answer written ·
-                Indian National Cricket Team
-                · 1h
-                Why are there no SC/ST OBC in the Indian cricket team?
-                AKSHIT BHARDWAJ
-                AKSHIT BHARDWAJ
-                Written 1h ago
-
-                Simply it's in talent…and for those who believe upper caste plays softly…do u know who got the first paramvir chakra ..SOMNATH SHARMA..and the last time I checked there was no economic or social di... (more)
-                Downvote
-                Comment
-                Share
-                Quora Topic Bot
-                Discover new people
-                Triya Bhattacharya
-                Triya Bhattacharya
-                Top Writer Emeritus
-                Followed by Bhavika Dave and 4 more
-                Rakshita Nagayach
-                Rakshita Nagayach
-                Civil Engineer at Indore Municipal Corporation
-                Followed by Saransh Sahai and 2 more
-                Arushi Jamar
-                Arushi Jamar
-                IIM Ahmedabad, PGP 2015-17
-                Followed by Balaji Viswanathan and Nivethithaa Chandru
-                Answer written ·
-                Photography
-                · 5h
-                What are some of the most widely circulated fake pictures?
-                Prashanth Vaidya
-                Prashanth Vaidya, Living one gasp at a time...
-                Written 5h ago
-
-                It has to be this quote by Alan Rickman.
-
-                This one keeps getting shared time and again. I so wish he actually said that.
-                Sadly, there isn’t a single source that credits Rickman for the same.
-
-                Sorry for... (more)
-                Downvote
-                Comment
-                Share
-                Question asked ·
-                Web Development
-                · 1h
-
-                Request Answers:
-                Request From Quora
-                We will distribute this question to writers, and notify you about new answers.
-                Answer written ·
-                Life and Living
-                · 47m
-                What are some ugly truths of life?
-                Alex Cio
-                Alex Cio, Being 100% true makes life much easier and better for everybody!
-                Written 47m ago
-
-                In my honest opinion, the ugliest truth is, that you need to learn everything on your own. We could share information between each other and learn from each other.the problem is just that we start ... (more)
-                Downvote
-                Comment1
-                Share
-                Question asked ·
-                Photography
-                · 39m
-                What do you call Ranbir Kapoor's job in the movie 'Yeh jawani hai deewani'?
-                And how to become that??
-                6 Answers
-                Follow21
-                Downvote
-                Request Answers:
-                Request From Quora
-                We will distribute this question to writers, and notify you about new answers.
-                Answer written ·
-                Education
-                · 2h
-                Why do some people study a lot and get bad grades and others without studying get good grades?
-                Nathaniel Brown
-                Nathaniel Brown, Teacher & Computer Programmer
-                Written 2h ago
-
-                I was one of the annoying people that seemed to do well without much work. There are three things that I notice looking back:
-
-                    I did not memorize formulas. I tried to understand the underlying princi...
-
-                (more)
-                Downvote
-                Comment
-                Share
-                Quora Topic Bot
-                Discover new topics
-                Microsoft (company)
-                Microsoft (company)
-                Microsoft Corporation is an American multinational corporation headquartered in Redmond, WA, that develops, manufactures, licenses, and supports a wide range of products and services predominantly related to computing through its various product divisions.
-                Followed by Manish Kumar and 3 more
-                Feature Selection in Machine Learning
-                Feature Selection in Machine Learning
-                Followed by Wenwen Tao (陶雯雯)
-                Indian Armed Forces
-                Indian Armed Forces
-                - Indian Air Force (IAF) [Hindi: भारतीय वायु सेना] - Indian Army [Hindi: भारतीय थलसेना] - Indian Navy [Hindi: भारतीय नौ सेना] - Indian Coast Guard [Hindi: भारतीय तटरक्षक]
-                Followed by Nivethithaa Chandru and 3 more
-                Answer written ·
-                Life and Living
-                · 6h
-                What is the most cringe-worthy thing you have heard a parent say?
-                Anonymous
-                Anonymous
-                Written 6h ago
-
-                Warning this is very racist and profanity ladden!
-
-                An acquaintance of my husband,who is from the same home country, say this when I asked why his young son, then about 9 years old, had a black eye an... (more)
-                Downvote
-                Comments2
-                Share
-                Question followed ·
-                Indian National Cricket Team
-                · 2h
-                Why did Rohit Sharma's performance significantly improve after he started opening for Indian cricket team?
-                Follow1
-                Downvote
-                Request Answers:
-                Request From Quora
-                We will distribute this question to writers, and notify you about new answers.
-                Answer written ·
-                 Ae Dil Hai Mushkil
-                · 55m
-                WHICH IS the best MOVIE "AE DIL HAI MUSHKIL" OR "SHIVAAY"?
-                Siddhartha Singh
-                Siddhartha Singh, A Philosopher
-                Written 55m ago
-
-                Not Spreading Negativity About Shivaay.. But Here's My Take on #AeDilHaiMushkil..Watched it FDFS.. It's All about preferring “I Friend You” over “I Love You”!
-
-                With its Brilliant Take on One - Sided ... (more)
-                Downvote
-                Comment1
-                Share
-                Answer written ·
-                Psychology
-                · 1h
-                If life is more precious than money, then why are doctors not held responsible for failure as like engineers?
-                Joshua Dawes
-                Joshua Dawes, Graduate Engineer, specializing in computer decision making and OR
-                Written 1h ago
-
-                Medical care is very different from difficult engineering projects. Specifically, if an engineer finds that there’s no safe way to do something, they’re expected to cancel the project rather than a... (more)
-                Downvote
-                Comments1+
-                Share
-                Answer written ·
-                Indian National Cricket Team
-                · 51m
-                What is special about the Indian cricket team jersey?
-                Rohit Jangid
-                Rohit Jangid, Who doesn't like cricket in India??
-                Written 51m ago
-
-                In a first, Indian cricketers sport their mothers' names on ODI jerseys.
-
-                The gesture by team India has touched all our hearts as they face New Zealand in the series-deciding final ODI at Vizag.
-
-                In a ... (more)
-                Downvote
-                Comment
-                Share
-                Update Your Profile
-                Next
-                Where have you lived?
-
-                Karaikal, Puducherry, India
-                Karaikal, Puducherry, India
-                Edit Bio
-
+            <%= answer.body %>
             </div>
-        </div>
-        <div class="footer">
-            <div class="row">
-                <div class="col-sm-2 col-md-2 col-lg-2">
-                    <button href="" class="btn btn-primary">ThumbsUp</button>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="footer">
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <button href="" class="btn btn-primary">ThumbsUp</button>
+                        <%= answer.likes %>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                    </div>
                 </div>
             </div>
         </div>
-        <hr>
     </div>
+<% end %>
 </div>

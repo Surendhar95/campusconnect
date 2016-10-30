@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :questions
+  get 'profiles/index'
+
+  get 'profiles/update'
+
+  resources :questions do
+    resources :answers
+  end
   resources :users
   get '/', to: 'pages#index'
 
