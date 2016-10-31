@@ -3,19 +3,21 @@
     <div class="story">
         <hr>
         <div class="question">
-            <h3><b> <%= question.body %></b></h3>
+            <a href="<%= question_path(question)%>"><h3 style="color:black"><b> <%= question.body %></b></h3></a>
             <br>
-            <h4> <%= question.description %></h4>
+            <h4 style="color:grey"> <%= question.description %></h4>
             Tags: <b><%= question.tags %></b>
         </div>
+        <hr>
         <% answer = question.answers.order(:likes).last %>
 
-        <br>
+
         <div class="answer">
             <div class="author">
                 <h5><b><%= User.find(answer.user_id).username %></b>,Coder,blogger</h5>
 
             </div>
+            <br>
             <img src="/images/food.jpg" class="ans-img"/>
             <br><br>
             <div class="comment more pos">
@@ -24,8 +26,14 @@
             <div class="footer">
                 <div class="row">
                     <div class="col-sm-2 col-md-2 col-lg-2">
-                        <button href="" class="btn btn-primary">ThumbsUp</button>
-                        <%= answer.likes %>
+                            <% like_count = Comment.where(user_id: User.first.id,answer_id: answer.id).count %>
+                            <% if like_count > 0 %>
+                                <button href="/comments/update" disabled="disabled" id="likes" class=" btn btn-primary" value="<%= answer.id %>">ThumbsUp | <span id="show_likes"><%= answer.likes %></span></button>
+                            <% else %>
+                                <button href="/comments/update"  id="likes" class=" btn btn-primary" value="<%= answer.id %>">ThumbsUp | <span id="show_likes"><%= answer.likes %></span></button>
+                            <% end %>
+
+
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
                     </div>

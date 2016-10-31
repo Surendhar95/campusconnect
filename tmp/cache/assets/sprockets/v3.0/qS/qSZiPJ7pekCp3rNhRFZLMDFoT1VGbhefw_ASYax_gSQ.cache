@@ -1,0 +1,19 @@
+I"†(function() {
+  $(document).on('click', '#likes', function() {
+    var ans_id;
+    ans_id = $(this).val();
+    $.ajax('/comments/update', {
+      type: 'PATCH',
+      dataType: 'text',
+      data: {
+        ans_id: ans_id
+      },
+      success: function(data) {
+        return $('.show_likes').html('ThumbsUp | <%= answer.likes%>');
+      }
+    });
+    return false;
+  });
+
+}).call(this);
+:ET

@@ -52,6 +52,9 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def write_answer
+    
+  end
   # DELETE /questions/1
   # DELETE /questions/1.json
   def destroy

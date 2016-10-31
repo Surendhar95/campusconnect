@@ -1,0 +1,56 @@
+
+<%= form_for([@question, @question.answers.build]) do |f| %>
+  <% if question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+<br>
+<br>
+
+<div class="align">
+  <div class="field form-group">
+    <%= f.label :user_id,class: "col-md-3 control-label name" %><br>
+        <div class="col-md-6">
+    <%= f.text_field :user_id,class:'form-control' %>
+  </div>
+</div>
+<br>
+<br>
+  <div class="field form-group">
+    <%= f.label :body,class: "col-md-3 control-label name"%><br>
+    <div class="col-md-6">
+    <%= f.text_area :body, cols: "30", rows: "7",class:'form-control'%>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="field form-group">
+    <%= f.label :likes,class: "col-md-3 control-label name" %><br>
+    <div class="col-md-6">
+    <%= f.text_field :likes, class:'form-control' %>
+  </div>
+</div>
+<br>
+<br>
+
+  <div class="field">
+    <%= f.submit'Add answer', :class => 'submit btn btn-large btn-primary' %>
+  </div>
+<% end %>
+</div>
+</div>

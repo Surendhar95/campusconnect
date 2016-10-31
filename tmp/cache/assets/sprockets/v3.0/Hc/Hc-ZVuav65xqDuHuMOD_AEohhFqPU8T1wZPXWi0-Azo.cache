@@ -1,0 +1,11 @@
+I"›(function() {
+  $('#answer-btn').click(function() {
+    $('.answer').hide();
+    $('#ans-form').show();
+    return false;
+  });
+
+  return;
+
+}).call(this);
+:ET

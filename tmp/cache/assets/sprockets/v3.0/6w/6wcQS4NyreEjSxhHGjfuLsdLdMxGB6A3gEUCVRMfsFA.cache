@@ -1,0 +1,21 @@
+I"Ö(function() {
+  $(document).on('submit', '#likes', function() {
+    var ans_id, likes;
+    ans_id = $(this + ' .ans_id').val();
+    likes = parseInt($(this + ' .thumbsup').val()) + 1;
+    $.ajax('/comments/update', {
+      type: 'PATCH',
+      dataType: 'text',
+      data: {
+        ans_id: ans_id,
+        likes: likes
+      },
+      success: function(data) {
+        return $(this + '.show_likes').html(likes);
+      }
+    });
+    return false;
+  });
+
+}).call(this);
+:ET

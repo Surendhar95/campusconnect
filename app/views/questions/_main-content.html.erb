@@ -1,21 +1,31 @@
 <div class="col-sm-6 col-md-6 col-lg-6">
+    <br>
 
     <div class="story">
-        <hr>
+
         <div class="question">
-            <h3><b> <%= @question.body %></b></h3>
+            <h3 style="color:black"><b> <%= @question.body %></b></h3>
             <br>
-            <h4> <%= @question.description %></h4>
-            <b><%= @question.tags %></b>
+            <h4 style="color:grey"> <%= @question.description %></h4>
+            Tags:<b><%= @question.tags %></b>
+            <br>
+            <br>
         </div>
+        <% if Answer.where(question_id: @question.id, user_id: User.first.id).count(:id) > 0%>
+            <%= link_to 'Answer',"javascript:void(0)",disabled: "disabled",id: 'answer-btn',class: "btn btn-primary" %>
+        <% else %>
+            <%= link_to 'Answer',"javascript:void(0)",id: 'answer-btn',class: "btn btn-primary" %>
+        <% end %>
         <% @question.answers.each do |answer| %>
 
-        <br>
+
         <div class="answer">
+            <hr>
             <div class="author">
                 <b><%= User.find(answer.user_id).username %></b>,Coder,blogger
 
             </div>
+            <br>
             <img src="/images/food.jpg" class="ans-img"/>
             <br><br>
             <div class="comment more pos">
@@ -24,8 +34,14 @@
             <div class="footer">
                 <div class="row">
                     <div class="col-sm-2 col-md-2 col-lg-2">
-                        <button href="" class="btn btn-primary">ThumbsUp</button>
-                        <%= answer.likes %>
+                            <% like_count = Comment.where(user_id: User.first.id,answer_id: answer.id).count%>
+                            <% if like_count > 0 %>
+                                <button href="/comments/update" disabled="true" id="likes" class=" btn btn-primary" value="<%= answer.id %>">ThumbsUp | <span id="show_likes"><%= answer.likes %></span></button>
+                            <% else %>
+                                <button href="/comments/update"  id="likes" class=" btn btn-primary" value="<%= answer.id %>">ThumbsUp | <span id="show_likes"><%= answer.likes %></span></button>
+                            <% end %>
+
+
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
                     </div>
@@ -34,11 +50,14 @@
                 </div>
             </div>
         </div>
-    <hr>
+
 
         <% end %>
 
 
 
+    </div>
+    <div id="ans-form">
+    <%= render 'ans-form', question: @question %>
     </div>
 </div>

@@ -1,0 +1,13 @@
+I"Ü(function() {
+  $(document).ready(function() {
+    return $('#answer-btn').click(function() {
+      $('.answer').hide();
+      $('#ans-form').show();
+      return $(this).hide();
+    });
+  });
+
+  return;
+
+}).call(this);
+:ET

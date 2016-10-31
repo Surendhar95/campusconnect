@@ -1,0 +1,19 @@
+I"»(function() {
+  $(document).on('click', '#likes', function() {
+    var ans_id, likes;
+    ans_id = $(this).val();
+    likes = $(this).outerHTML;
+    likes = parseInt(likes);
+    $.ajax('/comments/update', {
+      type: 'PATCH',
+      dataType: 'text',
+      data: {
+        ans_id: ans_id
+      },
+      success: function() {}
+    }, $(this).prop("disabled", true), $(this, '#show_likes').html(likes));
+    return false;
+  });
+
+}).call(this);
+:ET

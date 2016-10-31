@@ -1,0 +1,12 @@
+I"Æ(function() {
+  $(document).ready(function() {
+    return $('#answer-btn').click(function() {
+      $('.answer').hide();
+      return $('#ans-form').show();
+    });
+  });
+
+  return;
+
+}).call(this);
+:ET
