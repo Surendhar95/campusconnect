@@ -21,8 +21,23 @@
 
                   <ul class="nav navbar-nav navbar-right re-right">
                     <li id="click"><a href="<%= new_question_path%>"><span  class="custom-font2">Ask a Question</span></a></li>
-                    <li class=""><a href="#"><span class="custom-font2">Notification </span><span class="sr-only">(current)</span></a></li>
-
+                    <!--<li class=""><a href="#"><span class="custom-font2">Notification </span><span class="sr-only">(current)</span></a></li>-->
+                    <li class="dropdown">
+<!--changed by dileep-->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Notifications</span><span class="caret"></span></a>
+          <ul class="dropdown-menu it_is">
+          <li><a href="#">Action</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Another action</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+      <!--to this-->
                     <li id="click" class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Profile </span><span class="caret"></span></a>
                       <ul class="dropdown-menu">
@@ -40,48 +55,50 @@
         </div>
     </header>
     <body>
-        <br>
+      <br>
+      <br>
+      <br>
+      <br>
+              <br>
         <br>
 
         <div class="row">
+      <% @profile.each do |profile| %>
 
 
-      <div class="col-lg-offset-1 col-lg-7 col-sm-offset-1 col-sm-7 col-md-offset-1 col-md-7">
+      <div class="col-lg-offset-1 col-lg-7">
         <div class="container outer-div">
-          <div style="float:left">
-            <img class="circle" src="1.jpg"  style="width:110px;height:85px" alt="Bithiri Sathi" id="imagesathi">
-          </div>
-        <div class="float:right name-p1">
-          <p><b>Bithiri Sathi</b></p>
-          <p1>  He told them about what had happened.Without much discussion, they called </p1>
-        </div>
+            <div style="float:left">
+                <img class="circle" src="1.jpg"  style="width:110px;height:85px" alt="Bithiri Sathi" id="imagesathi">
+            </div>
+            <div class="float:right name-p1">
+              <p><b><%= profile.name %></b></p>
+              <br>
+              <p1><%= profile.bio %></p1>
+            </div>
       </div>
     </div>
-    <div class="col-lg-offset-8 col-lg-4 col-sm-offset-8 col-sm-4 col-md-offset-8 col-md-4">
+    <br>
+    <div class="col-lg-offset-8 col-lg-4">
       <div class="container right-div">
         <div class="float:right name-p">
+        <br>
         <p2><b>Education</b></p2>
-        <p3> B.Tech,Computer Science and Engineering.</p3>
-        <p4>National Institute of Technology, Puducherry  </p4>
+        <br>
+        <br>
+        <p3> <%= profile.college %></p3>
+        <br>
+        <p4><%= profile.school %></p4>
+        <br>
+        <br>
       </div>
       </div>
 
     </div>
+    <%end%>
 
-
-
-
-
-
-
-
-
-    </ul>
     </div>
-    </div>
-</div>
-        </div>
-    </body>
+      </body>
 
 
 </html>

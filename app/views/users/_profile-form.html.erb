@@ -1,0 +1,84 @@
+<div class="im-centered">
+<%= form_for([@user,@user.profiles.build]) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+<br>
+<br>
+
+<div class="align">
+  <div class="field form-group row">
+    <%= f.label :name,class: "col-md-3 control-label name" %><br>
+    <div class="col-md-6">
+        <%= f.text_field :name,class:'form-control' %>
+    </div>
+  </div>
+<br>
+<div class="field form-group row">
+  <%= f.label :bio,class: "col-md-3 control-label name" %><br>
+  <div class="col-md-6">
+      <%= f.text_area :bio,class:'form-control' %>
+  </div>
+</div>
+<br>
+<div class="field form-group row">
+  <%= f.label :school,class: "col-md-3 control-label name" %><br>
+  <div class="col-md-6">
+      <%= f.text_field :school,class:'form-control' %>
+  </div>
+</div>
+<br>
+<div class="field form-group row">
+  <%= f.label :college,class: "col-md-3 control-label name" %><br>
+  <div class="col-md-6">
+      <%= f.text_field :college,class:'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="field form-group row">
+  <%= f.label :work,class: "col-md-3 control-label name" %><br>
+  <div class="col-md-6">
+      <%= f.text_field :work,class:'form-control' %>
+  </div>
+</div>
+<br>
+<div class="field form-group row">
+  <%= f.label :dob,class: "col-md-3 control-label name" %><br>
+  <div class="col-md-6">
+      <%= f.date_select(:dob, :order => [:month, :day, :year]) %>
+  </div>
+</div>
+<br>
+</div>
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+
+  <div class="field">
+    <%= f.submit'Create profile', :class => 'submit btn btn-large btn-primary' %>
+  </div>
+<% end %>
+<br>
+<br>
+</div>
+</div>
+
+</div>

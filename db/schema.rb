@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030185411) do
+ActiveRecord::Schema.define(version: 20161031183128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,19 @@ ActiveRecord::Schema.define(version: 20161030185411) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "bio"
+    t.string   "school"
+    t.string   "college"
+    t.string   "work"
+    t.date     "dob"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
+  end
+
   create_table "questions", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "body"
@@ -49,14 +62,33 @@ ActiveRecord::Schema.define(version: 20161030185411) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   add_foreign_key "answers", "questions"
   add_foreign_key "answers", "users"
   add_foreign_key "comments", "answers"
   add_foreign_key "comments", "users"
+  add_foreign_key "profiles", "users"
   add_foreign_key "questions", "users"
 end

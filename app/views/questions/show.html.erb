@@ -1,4 +1,5 @@
 <html>
+
     <header>
         <div class='row header '>
 
@@ -24,13 +25,15 @@
                     <li class="active"><a href="#"><span class="custom-font2">Notification </span><span class="sr-only">(current)</span></a></li>
 
                     <li id="click" class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Profile </span><span class="caret"></span></a>
+
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>
+
                       <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">My Account</a></li>
+
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#"><%= link_to "Log out", destroy_user_session_path, :method => 'delete' %>   </a></li>
                       </ul>
                     </li>
                   </ul>
@@ -76,10 +79,3 @@
     </div>
 
 <% end %>-->
-
-
-
-
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
