@@ -62,12 +62,9 @@ ActiveRecord::Schema.define(version: 20161031183128) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
+    t.string   "password"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -78,6 +75,10 @@ ActiveRecord::Schema.define(version: 20161031183128) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.integer  "failed_attempts",        default: 0,  null: false
     t.string   "unlock_token"
     t.datetime "locked_at"
