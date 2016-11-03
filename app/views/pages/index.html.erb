@@ -25,11 +25,11 @@
 
                     <li id="click" class="dropdown">
 
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>    
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>
 
                       <ul class="dropdown-menu">
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">My Account</a></li>
+                        <li><a href="<%= profiles_index_path %>">Profile</a></li>
+                        <li><a href="<%= profiles_index_path %>">My Activity</a></li>
 
                         <li role="separator" class="divider"></li>
                         <li><a href="#"><%= link_to "Log out", destroy_user_session_path, :method => 'delete' %>   </a></li>

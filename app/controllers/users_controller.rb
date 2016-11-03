@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def update_profile
     @user = User.find(current_user.id)
+    
   end
 
   # POST /users

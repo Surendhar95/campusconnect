@@ -25,11 +25,11 @@
                     <li class=""><a href="#"><span class="custom-font2">Notification </span><span class="sr-only">(current)</span></a></li>
 
                     <li id="click" class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Profile </span><span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                          <li><a href="<%= profiles_index_path %>">Profile</a></li>
+                          <li><a href="<%= profiles_index_path %>">My Activity</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                       </ul>
@@ -44,8 +44,11 @@
         <br>
         <br>
         <h3 style="text-align:center">New Question</h3>
+        <br>
+        <br>
         <div class="row">
             <%= render 'form', question: @question %>
+        </div>
 
     </body>
 

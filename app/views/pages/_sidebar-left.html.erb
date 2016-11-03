@@ -6,14 +6,13 @@
  <h4 style="text-align:center">Top Questions</h4>
  <hr>
    <ul class="ul-left">
-     <li><a id="dileep-a" href="#">After 4 years of my graduation from an old IIT with a dual degree, I earn only 1 lakh a month. I am depressed. What should I do?</a></li>
-     <br>
-     <li><a id="dileep-a" href="#">After 4 years of my graduation from an old IIT with a dual degree, I earn only 1 lakh a month. I am depressed. What should I do?</a></li>
-     <br><li><a id="dileep-a" href="#">After 4 years of my graduation from an old IIT with a dual degree, I earn only 1 lakh a month. I am depressed. What should I do?</a></li>
-     <br><li><a id="dileep-a" href="#">After 4 years of my graduation from an old IIT with a dual degree, I earn only 1 lakh a month. I am depressed. What should I do?</a></li>
-     <br><li><a id="dileep-a" href="#">After 4 years of my graduation from an old IIT with a dual degree, I earn only 1 lakh a month. I am depressed. What should I do?</a></li>
-     <br><li><a id="dileep-a" href="#">After 4 years of my graduation from an old IIT with a dual degree, I earn only 1 lakh a month. I am depressed. What should I do?</a></li>
-     <br>
+    <% @popular = Answer.order(likes: :desc).limit(10) %>
+    <% @popular.each do |answer| %>
+        <% question = Question.find(answer.question_id)%>
+         <li><a id="dileep-a" href="#"><%= question.body %></a></li>
+         <br>
+    <% end %>
+
     </ul>
 </div>
 </div>
