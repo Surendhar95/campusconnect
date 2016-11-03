@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //edited by dileep from here
+<<<<<<< HEAD
+.im-centered
+{
+  position: absolute;
+  left: 30%;
+  min-width: 35%;
+  max-height: 25%;
+=======
 
 .im-centered_2
 {
@@ -10,10 +18,31 @@
   left: 30%;
   min-width: 35%;
   min-height: 68%;
+>>>>>>> 20084e2bf78ecf77b5dbc87ffdbab81fba3d3795
 border-radius: 0%;
 box-shadow: 10px 10px 30px 20px grey  ;
 background-color:#eeeeee;
 }
+<<<<<<< HEAD
+.im-centered_1
+{
+  position: absolute;
+  top:13%;
+  left: 30%;
+  min-width: 35%;
+  min-height: 80%;
+border-radius: 0%;
+box-shadow: 10px 10px 30px 20px grey  ;
+background-color:#eeeeee;
+}
+.im-centered_2
+{
+  position: absolute;
+  top:17%;
+  left: 30%;
+  min-width: 35%;
+  min-height: 72%;
+=======
 .im-centered
 {
   position: relative;
@@ -31,6 +60,7 @@ background-color:#f5f5f5;
   left: 30%;
   min-width: 35%;
   min-height: 80%;
+>>>>>>> 20084e2bf78ecf77b5dbc87ffdbab81fba3d3795
 border-radius: 0%;
 box-shadow: 10px 10px 30px 20px grey  ;
 background-color:#eeeeee;
@@ -124,9 +154,12 @@ height: 1px;
   position: relative;
   left:38.5%;
 }
+<<<<<<< HEAD
+=======
 .submit_profile_pos
 {
 position: relative;
     left:15%;
     margin-top: -5%;
 }
+>>>>>>> 20084e2bf78ecf77b5dbc87ffdbab81fba3d3795
