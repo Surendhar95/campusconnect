@@ -1,7 +1,8 @@
+
 <h2 class="no_other_class" style="text-align:center">Update Profile</h2>
 <br>
 <br>
-<div class="im-centered">
+<div class="im-centered im-centered_5">
 <%= form_for([@user, @user.profiles.build]) do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -15,9 +16,6 @@
     </div>
   <% end %>
 <br>
-<br>
-<br>
-
 <div class="align">
   <div class="field form-group row">
     <%= f.label :name,class: "col-md-3 control-label name2" %><br>
@@ -81,7 +79,4 @@
 <% end %>
 <br>
 <br>
-</div>
-</div>
-
 </div>

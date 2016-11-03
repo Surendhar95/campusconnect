@@ -18,12 +18,23 @@ background-color:#eeeeee;
 {
   position: relative;
   left: 5%;
-    margin-top:-8%;
+    margin-top:-5%;
   width: 20%;
-  min-height: 35%;
+  height: 40%;
 border-radius: 3%;
 background-color:#f5f5f5;
 }
+.im-centered_5
+{
+  position: relative;
+  left: 5%;
+    margin-top:-3%;
+  width: 20%;
+  max-height: 40%;
+border-radius: 3%;
+background-color:#f5f5f5;
+}
+
 .im-centered_1
 {
   position: absolute;
@@ -128,5 +139,16 @@ height: 1px;
 {
 position: relative;
     left:15%;
-    margin-top: -5%;
+    margin-top:-10.5%;
+}
+.position3
+{
+  position: relative;
+  margin-top:2%;
+}
+.no_other_class
+{
+  position: relative;
+  left:1%;
+  margin-top: -4.2%;
 }
