@@ -1,34 +1,55 @@
-<h2>Sign up</h2>
+<div class="im-centered_1">
 
+
+<h2 class="sign_up" style="color:#0077b5">Sign up</h2>
+<hr>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+<div class="align_1">
+  <div class="field form-group">
+    <%= f.label :username ,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <div class="col-md-7">
+    <%= f.text_field :username, autofocus: true,class:'form-control position' %>
   </div>
+</div>
+<br>
+<br>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="field form-group">
+    <%= f.label :email,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+  <div class="col-md-7">
+    <%= f.email_field :email, autofocus: true,class:'form-control position' %>
   </div>
-
+</div>
+<br>
+<br>
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <div class="post">
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    </div>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="col-md-7">
+    <%= f.password_field :password, autocomplete: "off",class:'form-control position' %>
   </div>
-
+</div>
+<br>
+<br>
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.label :password_confirmation,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+  <div class="col-md-7">
+    <%= f.password_field :password_confirmation, autocomplete: "off",class:'form-control position' %>
   </div>
+</div>
+<br>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions additional">
+    <%= f.submit "Sign up",class:"login_button submit btn btn-large btn-primary" %>
   </div>
 <% end %>
-
+<div class="align align_2 align_3">
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>

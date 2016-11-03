@@ -38,11 +38,12 @@
         </ul>
       </li>
       <!--to this-->
-                    <li id="click" class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Profile </span><span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">My Account</a></li>
+                    <li id="click" class="active dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                          <li><a href="<%= profiles_index_path %>">Profile</a></li>
+                          <li><a href="<%= profiles_index_path %>">My Activity</a></li>
 
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Logout</a></li>
@@ -69,32 +70,37 @@
       <div class="col-lg-offset-1 col-lg-7">
         <div class="container outer-div">
             <div style="float:left">
-                <img class="circle" src="1.jpg"  style="width:110px;height:85px" alt="Bithiri Sathi" id="imagesathi">
+                <img class="circle" src="1.jpg"  style="width:110px;height:85px"  id="imagesathi">
             </div>
-            <div class="float:right name-p1">
+            <div style="text-align:left" class="float:right name-p1">
               <p><b><%= profile.name %></b></p>
               <br>
               <p1><%= profile.bio %></p1>
+              <br>
+              <p1><%= link_to 'Edit', edit_user_profile_path(current_user,profile) %></p1>
             </div>
       </div>
     </div>
     <br>
     <div class="col-lg-offset-8 col-lg-4">
       <div class="container right-div">
-        <div class="float:right name-p">
+        <div style="text-align:center" class="float:right name-p">
         <br>
         <p2><b>Education</b></p2>
         <br>
         <br>
-        <p3> <%= profile.college %></p3>
+        <p3> <%= profile.work %> </p3>
         <br>
-        <p4><%= profile.school %></p4>
+        <p3> <%= profile.college %> </p3>
+        <br>
+        <p3> <%= profile.school %> </p3>
         <br>
         <br>
       </div>
       </div>
 
     </div>
+
     <%end%>
 
     </div>
