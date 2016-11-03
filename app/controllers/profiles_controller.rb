@@ -19,6 +19,22 @@ class ProfilesController < ApplicationController
       end
   end
 
+  def edit
+    @profile = Profile.where(id: params[:id], user_id: params[:user_id])
+    @profile = @profile.first
+  end
+
+  def update
+      @user = User.find(current_user.id)
+
+     @prof = @user.profiles.update(profiles_params)
+    redirect_to profiles_index_path
+  end
+
+  def set_profile
+    @profile = Profile.where(params[:id], user_id: params[:user_id])
+  end
+
   private
       def profiles_params
 

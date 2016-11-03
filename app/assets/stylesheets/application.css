@@ -15,6 +15,79 @@
  *= require bootstrap.min
 
  */
+ .pace {
+   -webkit-pointer-events: none;
+   pointer-events: none;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   user-select: none;
+ }
+
+ .pace-inactive {
+   display: none;
+ }
+
+ .pace .pace-progress {
+   background: #29d;
+   position: fixed;
+   z-index: 2000;
+   top: 0;
+   right: 100%;
+   width: 100%;
+   height: 2px;
+ }
+
+ header{
+     width:100%;
+     position:fixed;
+     top:0px;
+     z-index: 100;
+ }
+ .re-left{
+     position:relative;
+     left: 250px;
+ }
+
+ .re-right{
+     position:relative;
+     right:250px;
+ }
+
+ .submit-size{
+     width: 200px;
+ }
+
+ .brand-color{
+     color: #0077b5;
+ }
+
+ .brand-repos{
+     position:relative;
+     left: 200px;
+ }
+
+ .custom-font1{
+     font-size: 22px;
+ }
+
+ .custom-font2{
+     font-size: 15px;
+
+ }
+
+
+
+     hr {
+     border: none;
+    height: 5px;
+    color: black;
+    background-color: black;
+ }
+
+ body{
+     overflow-x: hidden;
+ }
 
  .ans-img{
      max-width:80%;
@@ -22,62 +95,71 @@
      height: auto;
 
  }
- hr {
-     border: none;
-     height: 1px;
-     /* Set the hr color */
-     color: #333; /* old IE */
-     background-color: #333; /* Modern Browsers */
+
+ .shadow {
+     -webkit-box-shadow: 2px 2px 4px 1px #fff;
+     box-shadow: 2px 2px 4px 1px #fff;
  }
-.select-color {
-    color: #0077b5;
-}
+ a {
+ 	color: #0254EB
+ }
+ a:visited {
+ 	color: #0254EB
+ }
+ a.morelink {
+ 	text-decoration:none;
+ 	outline: none;
+ }
+ .morecontent span {
+ 	display: none;
+ }
+ .comment {
+ 	width: 100%;
+ 	margin: 10px;
+ }
 
-.custom-font2:hover{
-    color: #0077b5;
-}
+ .pos{
+     position:relative;
+     left:-12px;
+ }
+ //styles below this done by dileep
+ .left
+ {
 
-.dropdown:hover span{
-    color: #0077b5;
-}
+ position: relative;
+ left: 5%;
+ margin-top: 30%;
+ max-width: 90%;
+ background-color: #f5f5f5;
+ }
+ .ul-left
+ {
 
-.left
-{
-
-position: relative;
-left: 5%;
-margin-top: 30%;
-max-width: 90%;
-background-color: #f5f5f5;
-}
-.ul-left
-{
-
-  position: relative;
-  left:-25%;
- display: block;
-  list-style-type: none;
-
-
-}
-.ul-left li
-{
-  position: relative;
-  min-width: 165%;
-  font-size: 15px;
-
-}d
-
-#dileep-a
-{
+   position: relative;
+   left:-25%;
+  display: block;
+   list-style-type: none;
 
 
-    font-size: 15px;
+ }
+ .ul-left li
+ {
+   position: relative;
+   min-width: 165%;
+   font-size: 15px;
 
-}
-#dileep-a:hover
-{
+ }d
 
-  background-color: #f5f5f5;
-  color:#0077B5;
-}
+ #dileep-a
+ {
+
+
+     font-size: 15px;
+
+ }
+ #dileep-a:hover
+ {
+
+   background-color: #f5f5f5;
+   color:#0077B5;
+ }

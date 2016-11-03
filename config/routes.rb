@@ -22,8 +22,9 @@ Rails.application.routes.draw do
 
   end
   resources :users do
-    resources :profiles
+      resources :profiles
   end
+
   get 'pages/index'
   get 'pages/about'
 
