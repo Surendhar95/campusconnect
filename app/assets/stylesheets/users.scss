@@ -3,17 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //edited by dileep from here
 
-.im-centered_2
-{
-  position: absolute;
-    top:10%;
-  left: 30%;
-  min-width: 35%;
-  min-height: 68%;
-border-radius: 0%;
-box-shadow: 10px 10px 30px 20px grey  ;
-background-color:#eeeeee;
-}
 .im-centered
 {
   position: relative;
@@ -24,17 +13,17 @@ background-color:#eeeeee;
 border-radius: 3%;
 background-color:#f5f5f5;
 }
-.im-centered_5
+.im-centered_2
 {
-  position: relative;
-  left: 5%;
-    margin-top:-3%;
-  width: 20%;
-  max-height: 40%;
-border-radius: 3%;
-background-color:#f5f5f5;
+  position: absolute;
+    top:19%;
+  left: 30%;
+  min-width: 35%;
+  min-height: 68%;
+border-radius: 0%;
+box-shadow: 10px 10px 30px 20px grey  ;
+background-color:#eeeeee;
 }
-
 .im-centered_1
 {
   position: absolute;
@@ -46,6 +35,18 @@ border-radius: 0%;
 box-shadow: 10px 10px 30px 20px grey  ;
 background-color:#eeeeee;
 }
+
+.im-centered_5
+{
+  position: relative;
+  left: 5%;
+    margin-top:-3%;
+  width: 20%;
+  max-height: 40%;
+border-radius: 3%;
+background-color:#f5f5f5;
+}
+
 .name
 {
   text-align: center;
