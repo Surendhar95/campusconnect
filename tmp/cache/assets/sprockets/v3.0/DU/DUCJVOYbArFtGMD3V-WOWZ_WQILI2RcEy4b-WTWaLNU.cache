@@ -1,0 +1,9 @@
+I"ƒ(function() {
+  jQuery(function() {
+    return $("#search").autocomplete({
+      source: "searches/"
+    });
+  });
+
+}).call(this);
+:ET

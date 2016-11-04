@@ -16,4 +16,5 @@
 //= require bootstrap.min
 //= require pace.min
 //= require shorten
+//= require jquery-ui/autocomplete
 //= require_tree .

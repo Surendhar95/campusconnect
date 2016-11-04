@@ -12,11 +12,12 @@ Rails.application.routes.draw do
   get 'profiles/update'
   get '/write_answer',to: 'questions#write_answer'
   get 'users/update_profile', to:'users#update_profile'
+  get '/pages/searches', to: 'searches#index'
 
 
 
 
-
+  resources :searches
   resources :questions do
     resources :answers
 
