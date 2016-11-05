@@ -4,6 +4,10 @@ class ProfilesController < ApplicationController
 
   def index
     @profile = Profile.where(user_id: current_user.id)
+    if @profile
+    else
+        redirect_to users_update_profile_path
+    end
   end
 
   def create
