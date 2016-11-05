@@ -7,5 +7,8 @@ $(document).ready ->
       $('.answer').hide();
       $('#ans-form').show();
       $(this).hide();
+    $("#search-submit").click ->
+      $("#page-title").text("Searching results....")
+
 
 return

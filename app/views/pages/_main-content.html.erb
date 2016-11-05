@@ -1,6 +1,6 @@
 <div class="col-sm-6 col-md-6 col-lg-6">
 <br>
-<h4>Your Feed</h4>
+<h4 id="page-title">Your Feed</h4>
 <% @question.each do |question| %>
     <div class="story">
         <hr>
@@ -17,12 +17,15 @@
 
         <div class="answer">
             <div class="author">
-                <h5>Written by<b><%= User.find(answer.user_id).username %></b></h5>
+                <h5 style="color: #616161;">Written by <b><%= User.find(answer.user_id).username %></b></h5>
 
             </div>
+            <% if answer.image.file? %>
+                <%=image_tag answer.image.url(:medium), class: "ans-img" %>
+                    <br>
+            <% end %>
             <br>
-            <img src="/images/food.jpg" class="ans-img"/>
-            <br><br>
+
             <div class="comment more pos">
             <%= answer.body %>
             </div>

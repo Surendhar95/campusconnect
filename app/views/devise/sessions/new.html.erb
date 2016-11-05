@@ -22,7 +22,7 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="align_1">
   <div class="field form-group">
-    <%= f.label :email,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <%= f.label :email,class: "col-md-5 control-label name3" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
       <div class="col-md-7">
       <%= f.email_field :email, autofocus: true,class:'form-control position' %>
       </div>
@@ -30,7 +30,7 @@
 <br>
 <br>
   <div class="field form-group">
-    <%= f.label :password,class: "col-md-5 control-label name" %><br /><br <br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <%= f.label :password,class: "col-md-5 control-label name4" %><br /><br <br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
     <div class="col-md-7">
     <%= f.password_field :password, autocomplete: "off",class:'form-control position' %>
   </div>
@@ -41,7 +41,7 @@
   <% if devise_mapping.rememberable? -%>
     <div class="field form-group">
       <%= f.check_box :remember_me,class: "col-md-2 control-label name" %>
-      <%= f.label :remember_me,class:"position1"%>
+      <%= f.label :remember_me,class:"position6"%>
   </div>
   <% end -%>
 <br>

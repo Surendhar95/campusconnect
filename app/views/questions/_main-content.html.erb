@@ -22,12 +22,15 @@
         <div class="answer">
             <hr>
             <div class="author">
-                <b><%= User.find(answer.user_id).username %></b>,Coder,blogger
+            <h5 style="color: #616161;">Written by <b><%= User.find(answer.user_id).username %></b></h5>
 
             </div>
+        
+        <% if answer.image.file? %>
+                <%=image_tag answer.image.url(:medium), class: "ans-img" %>
+                <br>
+            <% end %>
             <br>
-            <img src="/images/food.jpg" class="ans-img"/>
-            <br><br>
             <div class="comment more pos">
             <%= answer.body %>
             </div>
@@ -49,10 +52,13 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
 
         <% end %>
+<br>
+<br>
 
 
 
