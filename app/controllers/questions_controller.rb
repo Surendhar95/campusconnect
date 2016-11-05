@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-    @question.user_id = User.first.id
+    @question.user_id = current_user.id
 
     respond_to do |format|
       if @question.save
@@ -64,6 +64,13 @@ class QuestionsController < ApplicationController
       format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  def my_questions
+    @question = Question.where(user_id: current_user.id)
+  end
+
+  def my_answers
+    @answers = Answer.where(user_id: current_user.id)
   end
 
   private
