@@ -12,6 +12,6 @@ class AnswersController < ApplicationController
         def answers_params
             params[:answer][:user_id] = current_user.id
             params[:answer][:likes] = 0
-            params.require(:answer).permit(:user_id, :body, :likes)
+            params.require(:answer).permit(:image,:user_id, :body, :likes)
         end
 end

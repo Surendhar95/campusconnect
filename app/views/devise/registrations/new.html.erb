@@ -20,7 +20,7 @@
   <%= devise_error_messages! %>
 <div class="align_1">
   <div class="field form-group">
-    <%= f.label :username ,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <%= f.label :username ,class: "col-md-5 control-label name5" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
     <div class="col-md-7">
     <%= f.text_field :username, autofocus: true,class:'form-control position' %>
   </div>
@@ -29,7 +29,7 @@
 <br>
 
   <div class="field form-group">
-    <%= f.label :email,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <%= f.label :email,class: "col-md-5 control-label name3" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
   <div class="col-md-7">
     <%= f.email_field :email, autofocus: true,class:'form-control position' %>
   </div>
@@ -37,22 +37,22 @@
 <br>
 <br>
   <div class="field">
-    <%= f.label :password,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <%= f.label :password,class: "col-md-5 control-label name6" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
     <% if @minimum_password_length %>
     <div class="post">
       <em>(<%= @minimum_password_length %> characters minimum)</em>
     </div>
     <% end %><br />
   <div class="col-md-7">
-    <%= f.password_field :password, autocomplete: "off",class:'form-control position' %>
+    <%= f.password_field :password, autocomplete: "off",class:'form-control position5' %>
   </div>
 </div>
 <br>
 <br>
   <div class="field">
-    <%= f.label :password_confirmation,class: "col-md-5 control-label name" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
-  <div class="col-md-7">
-    <%= f.password_field :password_confirmation, autocomplete: "off",class:'form-control position' %>
+    <%= f.label :password_confirmation,class: "col-md-7 control-label name10" %><br/><br style ="display: block;margin-bottom: 5px;font-size:5px;line-height: 5px;">
+    <div class="col-md-7">
+    <%= f.password_field :password_confirmation, autocomplete: "off",class:'form-control position10' %>
   </div>
 </div>
 <br>

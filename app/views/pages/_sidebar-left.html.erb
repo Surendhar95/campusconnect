@@ -9,7 +9,7 @@
     <% @popular = Answer.order(likes: :desc).limit(10) %>
     <% @popular.each do |answer| %>
         <% question = Question.find(answer.question_id)%>
-         <li><a id="dileep-a" href="#"><%= question.body %></a></li>
+         <li><a id="dileep-a" href="<%= question_path(question)%>"><%= question.body %></a></li>
          <br>
     <% end %>
 
