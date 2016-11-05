@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get 'users/update_profile', to:'users#update_profile'
   get '/pages/searches', to: 'searches#index'
   get '/seaches', to: 'searches#index'
-
+  get '/profiles/my-questions', to: 'questions#my_questions'
+  get '/profiles/my-answers', to: 'questions#my_answers'
 
 
   resources :searches
