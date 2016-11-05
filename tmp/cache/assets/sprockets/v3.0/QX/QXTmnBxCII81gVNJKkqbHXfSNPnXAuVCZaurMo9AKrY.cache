@@ -1,0 +1,10 @@
+I"¡(function() {
+  jQuery(function() {
+    return $("#search").autocomplete({
+      source: "searches/",
+      appendTo: "#container"
+    });
+  });
+
+}).call(this);
+:ET
