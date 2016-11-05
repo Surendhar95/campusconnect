@@ -10,7 +10,8 @@ class AnswersController < ApplicationController
 
     private
         def answers_params
-            params[:answer][:user_id] = User.first.id
+            params[:answer][:user_id] = current_user.id
+            params[:answer][:likes] = 0
             params.require(:answer).permit(:user_id, :body, :likes)
         end
 end

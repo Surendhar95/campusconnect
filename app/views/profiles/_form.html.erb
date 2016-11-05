@@ -7,15 +7,9 @@
 
             <div class="navbar-header brand-repos">
 
-              <a class="navbar-brand " href="<%=  %>"><span class="custom-font1 brand-color">CampusConnect</span></a>
+              <a class="navbar-brand " href="<%= pages_index_path %>"><span class="custom-font1 brand-color">CampusConnect</span></a>
             </div>
 
-              <form class="navbar-form navbar-left re-left">
-                <div class="form-group ">
-                  <input type="text" class="form-control" style="width:400px" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-              </form>
 
               <ul class="nav navbar-nav navbar-right re-right">
                 <li id="click"><a href="<%= new_question_path%>"><span  class="custom-font2">Ask a Question</span></a></li>
@@ -128,7 +122,7 @@
 
 
   <div class="field">
-    <%= f.submit'Create profile', :class => 'submit btn btn-large btn-primary position4' %>
+    <%= f.submit'Update profile', :class => 'submit btn btn-large btn-primary position4' %>
   </div>
 <% end %>
 <br>

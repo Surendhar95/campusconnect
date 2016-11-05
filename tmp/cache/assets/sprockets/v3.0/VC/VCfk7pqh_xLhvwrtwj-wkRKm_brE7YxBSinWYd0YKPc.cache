@@ -1,0 +1,7 @@
+I"e(function() {
+  jQuery(function() {
+    return $("#search").autocomplete;
+  });
+
+}).call(this);
+:ET
