@@ -4,6 +4,8 @@ class AnswersController < ApplicationController
         @question = Question.find(params[:question_id])
 
         @answer = @question.answers.create(answers_params)
+        user_id = Question.find(@answer.question_id).user_id
+        Notification.create(user_id: user_id, commenter_id: current_user.id, answer_id: @answer.id, context: "answer")
 
         redirect_to question_path(@question)
     end

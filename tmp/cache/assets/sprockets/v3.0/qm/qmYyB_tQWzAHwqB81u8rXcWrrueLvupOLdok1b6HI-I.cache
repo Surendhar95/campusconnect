@@ -1,0 +1,12 @@
+I"Ç(function() {
+  $(document).on('turbolinks:load', function() {
+    return $("#search").autocomplete({
+      source: "searches/",
+      appendTo: "#container"
+    });
+  });
+
+  return;
+
+}).call(this);
+:ET

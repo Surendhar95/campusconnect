@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'notifications/index'
+
+  get 'notifications/create'
+
+  get 'notifications/update'
+
   root 'home#index'
 
   devise_for :users, controllers: { registrations: "registrations" }

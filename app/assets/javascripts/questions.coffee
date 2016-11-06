@@ -2,11 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
+$(document).on 'turbolinks:load', ->
     $('#answer-btn').click ->
-      $('.answer').hide();
-      $('#ans-form').show();
-      $(this).hide();
+      $('.answer').hide()
+      $('#ans-form').show()
+      $(this).hide()
+
     $("#search-submit").click ->
       $("#page-title").text("Searching results....")
 

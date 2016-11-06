@@ -1,6 +1,62 @@
-<h1>Editing Question</h1>
 
-<%= render 'form', question: @question %>
+<html>
+    <header>
+        <div class='row header '>
 
-<%= link_to 'Show', @question %> |
-<%= link_to 'Back', questions_path %>
+            <nav class="navbar navbar-default shadow">
+              <div class="container-fluid">
+
+                <div class="navbar-header brand-repos">
+
+                  <a class="navbar-brand " href="<%= pages_index_path %>"><span class="custom-font1 brand-color">CampusConnect</span></a>
+                </div>
+
+
+
+                <!-- <form class="navbar-form navbar-left re-left" method= "GET" action="<%= pages_index_path %>">
+                  <div class="form-group ">
+                    <input type="text" name="search" id="search" class="form-control" style="width:400px" placeholder="Search">
+
+                  </div>
+                  <button type="submit" class="btn btn-default">Search</button>
+                </form> -->
+
+                  <ul class="nav navbar-nav navbar-right re-right">
+                    <li id="click" class="active "><a href="#"><span  class="custom-font2 ">Ask a Question</span></a></li>
+                    <li class="dropdown">
+
+                        <%= render 'pages/notification', notification: @notification %>
+                    </li>
+
+      <li id="click" class="dropdown">
+
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="<%= profiles_index_path %>">Profile</a></li>
+                      <li><a href="<%= profiles_index_path %>">My Activity</a></li>
+
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#"><%= link_to "Log out", destroy_user_session_path, :method => 'delete' %>   </a></li>
+                    </ul>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+        </nav>
+        </div>
+    </header>
+    <body>
+        <br>
+        <br>
+        <h3 style="color:#0077b5;text-align:center">Editing Question</h3>
+        <br>
+        <br>
+        <div class="row">
+            <%= render 'form', question: @question %>
+        </div>
+
+    </body>
+
+
+</html>

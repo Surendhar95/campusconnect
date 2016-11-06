@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
 
 
   def index
+        @notification = Notification.order(id: :desc).where(user_id: current_user.id)
     @profile = Profile.where(user_id: current_user.id)
     if @profile
     else

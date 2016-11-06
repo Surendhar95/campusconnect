@@ -32,7 +32,7 @@
             <div class="footer">
                 <div class="row">
                     <div class="col-sm-2 col-md-2 col-lg-2">
-                            <% like_count = Comment.where(user_id: User.first.id,answer_id: answer.id).count %>
+                            <% like_count = Comment.where(user_id: current_user.id,answer_id: answer.id).count %>
                             <% if like_count > 0 %>
                                 <button href="/comments/update" disabled="disabled" id="likes" class=" btn btn-primary" value="<%= answer.id %>">ThumbsUp | <span id="show_likes"><%= answer.likes %></span></button>
                             <% else %>

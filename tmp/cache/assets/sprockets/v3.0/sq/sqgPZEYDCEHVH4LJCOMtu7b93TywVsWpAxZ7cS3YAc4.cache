@@ -1,0 +1,16 @@
+I"Z(function() {
+  $(document).ready(function() {
+    $('#answer-btn').click(function() {
+      $('.answer').hide();
+      $('#ans-form').show();
+      return $(this).disabled("disabled");
+    });
+    return $("#search-submit").click(function() {
+      return $("#page-title").text("Searching results....");
+    });
+  });
+
+  return;
+
+}).call(this);
+:ET
