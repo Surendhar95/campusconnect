@@ -1,7 +1,0 @@
-I"Å(function() {
-  $("#search-submit").click(function() {
-    return $("#page-title").text("Search Results");
-  });
-
-}).call(this);
-:ET
