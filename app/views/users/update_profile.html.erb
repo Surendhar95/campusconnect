@@ -7,7 +7,7 @@
 
                 <div class="navbar-header brand-repos">
 
-                  <a class="navbar-brand " href="<%=  %>"><span class="custom-font1 brand-color">CampusConnect</span></a>
+                  <a class="navbar-brand " href="<%= pages_index_path %>"><span class="custom-font1 brand-color">CampusConnect</span></a>
                 </div>
 
 
@@ -23,21 +23,10 @@
                     <li id="click"><a href="<%= new_question_path%>"><span  class="custom-font2">Ask a Question</span></a></li>
                     <!--<li class=""><a href="#"><span class="custom-font2">Notification </span><span class="sr-only">(current)</span></a></li>-->
                     <li class="dropdown">
-<!--changed by dileep-->
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Notifications</span><span class="caret"></span></a>
-          <ul class="dropdown-menu it_is">
-          <li><a href="#">Action</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Another action</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
+
+          <%= render 'pages/notification', notification: @notification %>
       </li>
-      <!--to this-->
+
                     <li id="click" class="active dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2"><%= current_user.username %> </span><span class="caret"></span></a>
 

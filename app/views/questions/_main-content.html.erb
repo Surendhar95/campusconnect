@@ -11,7 +11,7 @@
             <br>
             <br>
         </div>
-        <% if Answer.where(question_id: @question.id, user_id: User.first.id).count(:id) > 0%>
+        <% if Answer.where(question_id: @question.id, user_id: current_user.id).count(:id) > 0%>
             <%= link_to 'Answer',"javascript:void(0)",disabled: "disabled",id: 'answer-btn',class: "btn btn-primary" %>
         <% else %>
             <%= link_to 'Answer',"javascript:void(0)",id: 'answer-btn',class: "btn btn-primary" %>
@@ -25,7 +25,7 @@
             <h5 style="color: #616161;">Written by <b><%= User.find(answer.user_id).username %></b></h5>
 
             </div>
-        
+
         <% if answer.image.file? %>
                 <%=image_tag answer.image.url(:medium), class: "ans-img" %>
                 <br>
@@ -37,7 +37,7 @@
             <div class="footer">
                 <div class="row">
                     <div class="col-sm-2 col-md-2 col-lg-2">
-                            <% like_count = Comment.where(user_id: User.first.id,answer_id: answer.id).count%>
+                            <% like_count = Comment.where(user_id: current_user.id ,answer_id: answer.id).count%>
                             <% if like_count > 0 %>
                                 <button href="/comments/update" disabled="true" id="likes" class=" btn btn-primary" value="<%= answer.id %>">ThumbsUp | <span id="show_likes"><%= answer.likes %></span></button>
                             <% else %>

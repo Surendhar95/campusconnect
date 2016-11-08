@@ -25,19 +25,8 @@
                     <li id="click" class="active "><a href="#"><span  class="custom-font2 ">Ask a Question</span></a></li>
                     <li class="dropdown">
 
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="custom-font2">Notifications</span><span class="caret"></span></a>
-          <ul class="dropdown-menu it_is">
-          <li><a href="#">Action</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Another action</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
+                        <%= render 'pages/notification', notification: @notification %>
+                    </li>
 
       <li id="click" class="dropdown">
 
