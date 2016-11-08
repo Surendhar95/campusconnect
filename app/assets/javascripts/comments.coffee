@@ -7,6 +7,7 @@ $(document).on 'turbolinks:load', ->
 		countl = $("#show_likes").text()
 		countl = parseInt(countl)
 		ans_id = $(this).val()
+		id = $(this);
 
 		$.ajax '/comments/update',
 			type: 'PATCH'
@@ -15,8 +16,8 @@ $(document).on 'turbolinks:load', ->
 			  ans_id: ans_id,
 			}
 			success: (data) ->
-				$("#likes").prop("disabled",true)
-				$("#show_likes").text(countl+1)
+				$(id).prop("disabled",true)
+				$(id).find("#show_likes").text(countl+1)
 
 
 		return false

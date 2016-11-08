@@ -69,8 +69,11 @@
                                 <h5>Written by<b><%= User.find(answer.user_id).username %></b></h5>
 
                             </div>
-                            <br>
-                            <img src="/images/food.jpg" class="ans-img"/>
+                            
+                            <% if answer.image.file? %>
+                                <%=image_tag answer.image.url(:medium), class: "ans-img" %>
+                                    <br>
+                            <% end %>
                             <br><br>
                             <div class="comment more pos">
                             <%= answer.body %>

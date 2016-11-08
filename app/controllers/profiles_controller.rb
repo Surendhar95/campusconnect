@@ -3,11 +3,12 @@ class ProfilesController < ApplicationController
 
 
   def index
-        @notification = Notification.order(id: :desc).where(user_id: current_user.id)
+
+
     @profile = Profile.where(user_id: current_user.id)
-    if @profile
-    else
-        redirect_to users_update_profile_path
+    if @profile.empty?
+        @user = User.find(current_user.id)
+        redirect_to users_update_profile_path, user: @user
     end
   end
 

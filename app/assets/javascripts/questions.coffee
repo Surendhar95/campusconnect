@@ -10,6 +10,6 @@ $(document).on 'turbolinks:load', ->
 
     $("#search-submit").click ->
       $("#page-title").text("Searching results....")
-
+    
 
 return
